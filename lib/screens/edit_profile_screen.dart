@@ -324,11 +324,14 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                               onCreate: (Database db, int version) async {
                                 // When creating the db, create the table
                               });
-                          // delete Stop
+                          // delete user
                           int count = await database
                               .rawDelete('DELETE FROM Users WHERE id = ?', ['${registeredUser}']);
-                          usersList =
-                              await database.rawQuery('SELECT * FROM Users');
+                          usersList = await database.rawQuery('SELECT * FROM Users');
+                          // delete trip
+                          count = await database
+                              .rawDelete('DELETE FROM TraveledTo WHERE U_id = ?', ['${registeredUser}']);
+                          traveledToList = await database.rawQuery('SELECT * FROM TraveledTo');
                           Navigator.push(
                             context,
                             PageTransition(
