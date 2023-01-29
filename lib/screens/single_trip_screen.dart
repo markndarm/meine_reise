@@ -205,7 +205,7 @@ class _SingleTripScreenState extends State<SingleTripScreen> {
                       ),
                     ),
                     Text(
-                      "Meine Stops",
+                      "My Stops",
                       style: TextStyle(
                         color: Colors.green,
                         fontSize: 20,

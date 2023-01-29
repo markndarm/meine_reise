@@ -164,7 +164,7 @@ class EditSingleTripScreen extends StatelessWidget {
                   Padding(
                     padding: EdgeInsets.only(top: 8.0),
                     child: Text(
-                      'Editiere',
+                      'Edit',
                       style: TextStyle(
                         fontSize: 30,
                         color: Colors.black,
